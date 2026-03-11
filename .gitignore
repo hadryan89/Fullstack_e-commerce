@@ -20,6 +20,9 @@ dist/
 Thumbs.db
 nul
 
+# Claude Code
+.claude/
+
 # Logs
 *.log
 npm-debug.log*
