@@ -20,8 +20,6 @@ dist/
 Thumbs.db
 nul
 
-# Claude Code
-.claude/
 
 # Logs
 *.log
