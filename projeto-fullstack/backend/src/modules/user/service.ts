@@ -1,5 +1,6 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
+import { JWT_SECRET } from '../../config/env';
 import { User, IUser } from './model';
 import { CreateUserDTO, LoginDTO, UserResponseDTO } from './dto';
 
@@ -32,7 +33,7 @@ export class UserService {
 
     const token = jwt.sign(
       { id: user._id, email: user.email },
-      process.env.JWT_SECRET || 'secret',
+      JWT_SECRET,
       { expiresIn: '7d' }
     );
 
